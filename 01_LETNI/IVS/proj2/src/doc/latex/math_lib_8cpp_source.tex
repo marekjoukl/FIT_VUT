@@ -1,0 +1,110 @@
+\hypertarget{math_lib_8cpp_source}{}\doxysection{math\+Lib.\+cpp}
+\mbox{\hyperlink{math_lib_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00001}00001\ \textcolor{comment}{/******************************************************}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Project\ name:\ VUT\ FIT\ IVS\ Project\ 2\ -\/\ Calculator}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ File:\ mathLib.cpp}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ Date:\ 14.4.2023}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ Authors:\ Marek\ Joukl\ (xjoukl00)}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00006}00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Marko\ Olesak\ (xolesa00)}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00007}00007\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Ondrej\ Kozanyi\ (xkozan01)}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00008}00008\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Jan\ Findra\ (xfindr01)}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00009}00009\ \textcolor{comment}{******************************************************/}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00010}00010\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00011}00011\ \textcolor{comment}{\ *\ @file\ mathLib.cpp}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00012}00012\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00013}00013\ \textcolor{comment}{\ *\ @brief\ File\ that\ handles\ math\ library}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00014}00014\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00018}\mbox{\hyperlink{math_lib_8cpp_a4062b4d538b04c5d3aed3027841080c9}{00018}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a4062b4d538b04c5d3aed3027841080c9}{Negation}}(\textcolor{keywordtype}{double}\ oldValue)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{double}\ newValue\ =\ -\/1\ *\ oldValue;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ newValue;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00024}\mbox{\hyperlink{math_lib_8cpp_a61b3957b9be433ff2ef228cd3e14cf8b}{00024}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a61b3957b9be433ff2ef228cd3e14cf8b}{Addition}}(\textcolor{keywordtype}{double}\ addend1,\ \textcolor{keywordtype}{double}\ addend2)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{double}\ sum\ =\ addend1\ +\ addend2;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ sum;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00030}\mbox{\hyperlink{math_lib_8cpp_a7f5c68c8f11937ff38a3c227e37e5229}{00030}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a7f5c68c8f11937ff38a3c227e37e5229}{Subtraction}}(\textcolor{keywordtype}{double}\ minuend,\ \textcolor{keywordtype}{double}\ subtrahend)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{double}\ difference\ =\ minuend\ -\/\ subtrahend;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ difference;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00036}\mbox{\hyperlink{math_lib_8cpp_a893f3ec6d972a2962cd9aadcfbed4ce2}{00036}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a893f3ec6d972a2962cd9aadcfbed4ce2}{Multiplication}}(\textcolor{keywordtype}{double}\ multiplicand,\ \textcolor{keywordtype}{double}\ multiplier)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{double}\ product\ =\ multiplicand\ *\ multiplier;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{return}\ product;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00042}\mbox{\hyperlink{math_lib_8cpp_a95f5916f0d02f84f8bf4a3612c4fe055}{00042}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a95f5916f0d02f84f8bf4a3612c4fe055}{Division}}(\textcolor{keywordtype}{double}\ dividend,\ \textcolor{keywordtype}{double}\ divisor)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (divisor\ ==\ 0.0)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::overflow\_error(\textcolor{stringliteral}{"{}Division\ by\ zero..."{}});}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{double}\ quotient\ =\ dividend\ /\ divisor;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ quotient;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00051}\mbox{\hyperlink{math_lib_8cpp_af506daa7594a391245d945492aa1fdb8}{00051}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_af506daa7594a391245d945492aa1fdb8}{Power}}(\textcolor{keywordtype}{double}\ base,\ \textcolor{keywordtype}{double}\ exponent)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00052}00052\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (exponent\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ base;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ exponent\ -\/\ 1;\ i++)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ result\ *=\ base;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00065}\mbox{\hyperlink{math_lib_8cpp_a255a7f2fd204bd525b90b72e8fe1fc88}{00065}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a255a7f2fd204bd525b90b72e8fe1fc88}{Factorial}}(\textcolor{keywordtype}{double}\ factorial)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (factorial\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ factorial;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ factorial\ -\/\ 1;\ i\ >\ 0;\ i-\/-\/)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ result\ *=\ i;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00082}\mbox{\hyperlink{math_lib_8cpp_a748f65c0f353f493cfc5c3bfafb7fc34}{00082}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a748f65c0f353f493cfc5c3bfafb7fc34}{Nthroot}}(\textcolor{keywordtype}{double}\ radicand,\ \textcolor{keywordtype}{double}\ degree)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00083}00083\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (radicand\ <\ 0.0)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::overflow\_error(\textcolor{stringliteral}{"{}Radicand\ less\ than\ 0..."{}});}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (degree\ ==\ 0.0)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00090}00090\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::overflow\_error(\textcolor{stringliteral}{"{}Root\ degree\ of\ 0..."{}});}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ pow(radicand,\ 1.0\ /\ degree);}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00099}\mbox{\hyperlink{math_lib_8cpp_a963877f4151000dffa383d8407863867}{00099}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{math_lib_8cpp_a963877f4151000dffa383d8407863867}{Percentile}}(\textcolor{keywordtype}{double}\ number)}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00100}00100\ \{}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ number\ /\ 100.0;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{math_lib_8cpp_source_l00105}00105\ \textcolor{comment}{/**************\ END\ OF\ mathLib.cpp\ **************/}}
+
+\end{DoxyCode}

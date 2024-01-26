@@ -1,0 +1,56 @@
+\hypertarget{calculator_8h_source}{}\doxysection{calculator.\+h}
+\mbox{\hyperlink{calculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00001}00001\ \textcolor{comment}{/******************************************************}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Project\ name:\ VUT\ FIT\ IVS\ Project\ 2\ -\/\ Calculator}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00003}00003\ \textcolor{comment}{\ *\ File:\ calculator.h}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00004}00004\ \textcolor{comment}{\ *\ Date:\ 14.4.2023}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Authors:\ Marek\ Joukl\ (xjoukl00)}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00006}00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Marko\ Olesak\ (xolesa00)}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00007}00007\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Ondrej\ Kozanyi\ (xkozan01)}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00008}00008\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Jan\ Findra\ (xfindr01)}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00009}00009\ \textcolor{comment}{******************************************************/}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00010}00010\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00011}00011\ \textcolor{comment}{\ *\ @file\ calculator.h}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @brief\ File\ that\ contains\ function\ and\ class\ declaration\ for\ calculator.cpp}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00013}00013\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00014}00014\ \textcolor{preprocessor}{\#ifndef\ CALCULATOR\_H}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00015}00015\ \textcolor{preprocessor}{\#define\ CALCULATOR\_H}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <QMenu>}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <QAction>}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <QMenuBar>}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00023}00023\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00024}00024\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcalculator}{calculator}};\ \}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00025}00025\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00027}\mbox{\hyperlink{classcalculator}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcalculator}{calculator}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00029}00029\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00031}00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{classcalculator}{calculator}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{classcalculator_a6129b309f699d91c1f7a17810298c010}{\string~calculator}}();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00035}00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00036}00036\ \ \ \ \ Ui::calculator\ *ui;}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00038}00038\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ digit\_pressed();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ operation\_pressed();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonDec\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonNeg\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonCE\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonC\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonEq\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonFact\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_ButtonPer\_released();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionHelp\_list\_triggered();}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00049}00049\ \};}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00050}00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CALCULATOR\_H}}
+\DoxyCodeLine{\Hypertarget{calculator_8h_source_l00051}00051\ \textcolor{comment}{/**************\ END\ OF\ calculator.h\ **************/}}
+
+\end{DoxyCode}

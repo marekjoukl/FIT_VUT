@@ -1,0 +1,29 @@
+Terminy :
+Zaciatok prace na projekte: 20.3.2023
+Navrh projektu: ~ 20.3. - 23.3.2023
+Implementacia projektu: ~ 23.3. - 17.4.2023
+Dodatocne testovanie, tvorba dokumentacie a manualu: ~ 17.4 - 24.4.2023
+Zaverecne upravy: ~ 24.4 - 26.4.2023
+
+Rozdelenie uloh :
+Matematicka kniznica - xolesa00, xjoukl00
+GUI - xfindr01
+Instalator - xfindr01
+Testovanie - xjoukl00
+Profiling - xkozan01, xolesa00
+Dokumentacia - xkozan01
+
+Komunikacne kanaly : Discord, osobne stretnutia
+
+Pravidla komunikacie :
+
+	Discord:
+	- pravidelna kontrola prispevkov
+        - zaradenie prispevkov do prislusnych miestnosti
+        - archivacia dolezitych prispevkov ako pinned
+        
+        Osobne stretnutia:
+        - stretnutie kazdy tyzden alebo podla potreby
+
+Verzovaci system : Git, Github
+	nazov repozitara: findraj/ivs-project2

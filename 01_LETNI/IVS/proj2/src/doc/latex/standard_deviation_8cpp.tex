@@ -1,0 +1,143 @@
+\hypertarget{standard_deviation_8cpp}{}\doxysection{standard\+Deviation.\+cpp File Reference}
+\label{standard_deviation_8cpp}\index{standardDeviation.cpp@{standardDeviation.cpp}}
+
+
+File that calculates standart deviation.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include \char`\"{}math\+Lib.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{standard_deviation_8cpp_a741db801d8cf3b4a3fdee226b79e7f7a}{Mean}} (const std\+::vector$<$ double $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Calculate the mean of the numbers in a vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{standard_deviation_8cpp_a3099e8316cf3e96ac365a3669544c22b}{Sum\+Of\+Squares}} (const std\+::vector$<$ double $>$ \&values, double mean)
+\begin{DoxyCompactList}\small\item\em Calculates the sum of squares from the provided mean and values. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{standard_deviation_8cpp_ac6b0a3d2283522deb14d81c0f096643a}{Variance}} (const std\+::vector$<$ double $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Calculates the variance of the provided vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{standard_deviation_8cpp_a650e52042b58ba705e7d8bc080cc48cd}{Standard\+Deviation}} (const std\+::vector$<$ double $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Calculates the standard deviation of the provided vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{standard_deviation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function that reads numbers from the input and calculates their standard deviation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File that calculates standart deviation. 
+
+
+
+Definition in file \mbox{\hyperlink{standard_deviation_8cpp_source}{standard\+Deviation.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{standard_deviation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{standard_deviation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{standardDeviation.cpp@{standardDeviation.cpp}!main@{main}}
+\index{main@{main}!standardDeviation.cpp@{standardDeviation.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function that reads numbers from the input and calculates their standard deviation. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{standard_deviation_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{standard_deviation_8cpp_source}{standard\+Deviation.\+cpp}}.
+
+\mbox{\Hypertarget{standard_deviation_8cpp_a741db801d8cf3b4a3fdee226b79e7f7a}\label{standard_deviation_8cpp_a741db801d8cf3b4a3fdee226b79e7f7a}} 
+\index{standardDeviation.cpp@{standardDeviation.cpp}!Mean@{Mean}}
+\index{Mean@{Mean}!standardDeviation.cpp@{standardDeviation.cpp}}
+\doxysubsubsection{\texorpdfstring{Mean()}{Mean()}}
+{\footnotesize\ttfamily double Mean (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Calculate the mean of the numbers in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & A vector of double values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mean value of the input vector 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{standard_deviation_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{standard_deviation_8cpp_source}{standard\+Deviation.\+cpp}}.
+
+\mbox{\Hypertarget{standard_deviation_8cpp_a650e52042b58ba705e7d8bc080cc48cd}\label{standard_deviation_8cpp_a650e52042b58ba705e7d8bc080cc48cd}} 
+\index{standardDeviation.cpp@{standardDeviation.cpp}!StandardDeviation@{StandardDeviation}}
+\index{StandardDeviation@{StandardDeviation}!standardDeviation.cpp@{standardDeviation.cpp}}
+\doxysubsubsection{\texorpdfstring{StandardDeviation()}{StandardDeviation()}}
+{\footnotesize\ttfamily double Standard\+Deviation (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Calculates the standard deviation of the provided vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & A vector of double values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The standard deviation of the input vector 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{standard_deviation_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{standard_deviation_8cpp_source}{standard\+Deviation.\+cpp}}.
+
+\mbox{\Hypertarget{standard_deviation_8cpp_a3099e8316cf3e96ac365a3669544c22b}\label{standard_deviation_8cpp_a3099e8316cf3e96ac365a3669544c22b}} 
+\index{standardDeviation.cpp@{standardDeviation.cpp}!SumOfSquares@{SumOfSquares}}
+\index{SumOfSquares@{SumOfSquares}!standardDeviation.cpp@{standardDeviation.cpp}}
+\doxysubsubsection{\texorpdfstring{SumOfSquares()}{SumOfSquares()}}
+{\footnotesize\ttfamily double Sum\+Of\+Squares (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{values,  }\item[{double}]{mean }\end{DoxyParamCaption})}
+
+
+
+Calculates the sum of squares from the provided mean and values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & A vector of double values \\
+\hline
+{\em mean} & The mean value of the input vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of squares of the vector 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{standard_deviation_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{standard_deviation_8cpp_source}{standard\+Deviation.\+cpp}}.
+
+\mbox{\Hypertarget{standard_deviation_8cpp_ac6b0a3d2283522deb14d81c0f096643a}\label{standard_deviation_8cpp_ac6b0a3d2283522deb14d81c0f096643a}} 
+\index{standardDeviation.cpp@{standardDeviation.cpp}!Variance@{Variance}}
+\index{Variance@{Variance}!standardDeviation.cpp@{standardDeviation.cpp}}
+\doxysubsubsection{\texorpdfstring{Variance()}{Variance()}}
+{\footnotesize\ttfamily double Variance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Calculates the variance of the provided vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & A vector of double values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The variance of the input vector 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{standard_deviation_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{standard_deviation_8cpp_source}{standard\+Deviation.\+cpp}}.
+

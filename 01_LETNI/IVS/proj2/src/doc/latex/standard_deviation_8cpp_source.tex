@@ -1,0 +1,106 @@
+\hypertarget{standard_deviation_8cpp_source}{}\doxysection{standard\+Deviation.\+cpp}
+\mbox{\hyperlink{standard_deviation_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00001}00001\ \textcolor{comment}{/******************************************************}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Project\ name:\ VUT\ FIT\ IVS\ Project\ 2\ -\/\ Calculator}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ File:\ standardDeviation.cpp}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ Date:\ 14.4.2023}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ Authors:\ Marek\ Joukl\ (xjoukl00)}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00006}00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Marko\ Olesak\ (xolesa00)}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00007}00007\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Ondrej\ Kozanyi\ (xkozan01)}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00008}00008\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ Jan\ Findra\ (xfindr01)}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00009}00009\ \textcolor{comment}{\ ******************************************************/}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00010}00010\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00011}00011\ \textcolor{comment}{\ *\ @file\ standardDeviation.cpp}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00013}00013\ \textcolor{comment}{\ *\ @brief\ File\ that\ calculates\ standart\ deviation}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00014}00014\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math_lib_8h}{mathLib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00019}00019\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00020}00020\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00021}00021\ \textcolor{comment}{\ *\ @brief\ Calculate\ the\ mean\ of\ the\ numbers\ in\ a\ vector}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00022}00022\ \textcolor{comment}{\ *\ @param\ values\ A\ vector\ of\ double\ values}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00023}00023\ \textcolor{comment}{\ *\ @return\ The\ mean\ value\ of\ the\ input\ vector}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00024}00024\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00025}\mbox{\hyperlink{standard_deviation_8cpp_a741db801d8cf3b4a3fdee226b79e7f7a}{00025}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{standard_deviation_8cpp_a741db801d8cf3b4a3fdee226b79e7f7a}{Mean}}(\textcolor{keyword}{const}\ std::vector<double>\ \&values)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{double}\ sum\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{double}\ value\ :\ values)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ sum\ =\ \mbox{\hyperlink{math_lib_8cpp_a61b3957b9be433ff2ef228cd3e14cf8b}{Addition}}(sum,\ value);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{double}\ mean\ =\ \mbox{\hyperlink{math_lib_8cpp_a95f5916f0d02f84f8bf4a3612c4fe055}{Division}}(sum,\ values.size());}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ mean;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00036}00036\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00037}00037\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00038}00038\ \textcolor{comment}{\ *\ @brief\ Calculates\ the\ sum\ of\ squares\ from\ the\ provided\ mean\ and\ values.}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00039}00039\ \textcolor{comment}{\ *\ @param\ values\ A\ vector\ of\ double\ values}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00040}00040\ \textcolor{comment}{\ *\ @param\ mean\ The\ mean\ value\ of\ the\ input\ vector}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00041}00041\ \textcolor{comment}{\ *\ @return\ The\ sum\ of\ squares\ of\ the\ vector}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00042}00042\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00043}\mbox{\hyperlink{standard_deviation_8cpp_a3099e8316cf3e96ac365a3669544c22b}{00043}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{standard_deviation_8cpp_a3099e8316cf3e96ac365a3669544c22b}{SumOfSquares}}(\textcolor{keyword}{const}\ std::vector<double>\ \&values,\ \textcolor{keywordtype}{double}\ mean)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{double}\ sum\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{double}\ value\ :\ values)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ diff\ =\ \mbox{\hyperlink{math_lib_8cpp_a7f5c68c8f11937ff38a3c227e37e5229}{Subtraction}}(value,\ mean);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ square\ =\ \mbox{\hyperlink{math_lib_8cpp_af506daa7594a391245d945492aa1fdb8}{Power}}(diff,\ 2.0);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ sum\ =\ \mbox{\hyperlink{math_lib_8cpp_a61b3957b9be433ff2ef228cd3e14cf8b}{Addition}}(sum,\ square);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ sum;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00054}00054\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00055}00055\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00056}00056\ \textcolor{comment}{\ *\ @brief\ Calculates\ the\ variance\ of\ the\ provided\ vector.}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00057}00057\ \textcolor{comment}{\ *\ @param\ values\ A\ vector\ of\ double\ values}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00058}00058\ \textcolor{comment}{\ *\ @return\ The\ variance\ of\ the\ input\ vector}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00059}00059\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00060}\mbox{\hyperlink{standard_deviation_8cpp_ac6b0a3d2283522deb14d81c0f096643a}{00060}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{standard_deviation_8cpp_ac6b0a3d2283522deb14d81c0f096643a}{Variance}}(\textcolor{keyword}{const}\ std::vector<double>\ \&values)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (values.empty())}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Input\ vector\ is\ empty"{}});}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{double}\ meanValue\ =\ \mbox{\hyperlink{standard_deviation_8cpp_a741db801d8cf3b4a3fdee226b79e7f7a}{Mean}}(values);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{double}\ sumOfSquaresValue\ =\ \mbox{\hyperlink{standard_deviation_8cpp_a3099e8316cf3e96ac365a3669544c22b}{SumOfSquares}}(values,\ meanValue);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{double}\ variance\ =\ \mbox{\hyperlink{math_lib_8cpp_a95f5916f0d02f84f8bf4a3612c4fe055}{Division}}(sumOfSquaresValue,\ values.size());}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{return}\ variance;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00070}00070\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00071}00071\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00072}00072\ \textcolor{comment}{\ *\ @brief\ Calculates\ the\ standard\ deviation\ of\ the\ provided\ vector.}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00073}00073\ \textcolor{comment}{\ *\ @param\ values\ A\ vector\ of\ double\ values}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00074}00074\ \textcolor{comment}{\ *\ @return\ The\ standard\ deviation\ of\ the\ input\ vector}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00075}00075\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00076}\mbox{\hyperlink{standard_deviation_8cpp_a650e52042b58ba705e7d8bc080cc48cd}{00076}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{standard_deviation_8cpp_a650e52042b58ba705e7d8bc080cc48cd}{StandardDeviation}}(\textcolor{keyword}{const}\ std::vector<double>\ \&values)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{double}\ varianceValue\ =\ \mbox{\hyperlink{standard_deviation_8cpp_ac6b0a3d2283522deb14d81c0f096643a}{Variance}}(values);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{double}\ standardDeviation\ =\ \mbox{\hyperlink{math_lib_8cpp_a748f65c0f353f493cfc5c3bfafb7fc34}{Nthroot}}(varianceValue,\ 2.0);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{return}\ standardDeviation;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00082}00082\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00083}00083\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00084}00084\ \textcolor{comment}{\ *\ @brief\ Main\ function\ that\ reads\ numbers\ from\ the\ input\ and\ calculates\ their\ standard\ deviation.}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00085}00085\ \textcolor{comment}{\ *\ @return\ 0}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00086}00086\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00087}\mbox{\hyperlink{standard_deviation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00087}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{standard_deviation_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00088}00088\ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00089}00089\ \ \ \ \ std::vector<double>\ values;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{double}\ num;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{while}\ (scanf(\textcolor{stringliteral}{"{}\%lf"{}},\ \&num)\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ values.push\_back(num);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordtype}{double}\ sd\ =\ \mbox{\hyperlink{standard_deviation_8cpp_a650e52042b58ba705e7d8bc080cc48cd}{StandardDeviation}}(values);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00097}00097\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}},\ sd);}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{standard_deviation_8cpp_source_l00101}00101\ \textcolor{comment}{/**************\ END\ OF\ standardDeviation.cpp\ **************/}}
+
+\end{DoxyCode}

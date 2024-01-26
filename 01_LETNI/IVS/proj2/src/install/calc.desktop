@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=Qt;App;
+Exec=/usr/local/bin/calculator
+GenericName=Simple Calculator
+Icon=/usr/share/pixmaps/calculator.png
+Name=calculator
+Type=Application
