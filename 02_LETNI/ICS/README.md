@@ -19,4 +19,4 @@ dotnet run --project InformationSystem.App
  ⚠️ Works only on Mac OS ⚠️
 
  ## Preview
-    ![app_photo](./app_preview.png)
+![app_photo](./app_preview.png)
