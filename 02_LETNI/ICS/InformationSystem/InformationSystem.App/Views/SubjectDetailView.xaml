@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="using:InformationSystem.App.Views"
+             xmlns:m="clr-namespace:InformationSystem.BL.Models;assembly=InformationSystem.BL"
+             xmlns:subject="using:InformationSystem.App.ViewModels.Subjects"
+             x:Class="InformationSystem.App.Views.SubjectDetailView"
+             x:DataType="subject:SubjectDetailViewModel">
+    <VerticalStackLayout BackgroundColor="White">
+        <VerticalStackLayout BackgroundColor="White">
+            <Button Text="Delete"
+                    FontSize="20"
+                    TextColor="White"
+                    Padding="10"
+                    VerticalOptions="Center"
+                    BackgroundColor="Red"
+                    HorizontalOptions="End"
+                    Margin="20, 0"
+                    Command="{Binding DeleteCommand}"
+            />
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Frame BackgroundColor="Grey"
+                   CornerRadius="10"
+                   Padding="10"
+                   Margin="10"
+                   HorizontalOptions="Fill"
+                   WidthRequest="300"
+                   HeightRequest="50"
+            >
+                <Label Text="Subject Name"
+                       FontSize="20"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                />
+            </Frame>
+
+            <Frame x:Name="NameEntry"
+                   BorderColor="DarkGray"
+                   BackgroundColor="LightGray"
+                   Padding="0">
+                <Entry
+                       TextColor="Black"
+                       Placeholder="Enter name here"
+                       HorizontalOptions="Fill"
+                       Text="{Binding Subject.Name}" />
+            </Frame>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Frame BackgroundColor="Grey"
+                   CornerRadius="10"
+                   Padding="10"
+                   Margin="10"
+                   HorizontalOptions="Fill"
+                   WidthRequest="300"
+            >
+                <Label Text="Subject Abbreviation"
+                       FontSize="20"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                />
+            </Frame>
+
+            <Frame x:Name="AbbreviationEntry"
+                   BorderColor="DarkGray"
+                   BackgroundColor="LightGray"
+                   Padding="0">
+                <Entry
+                    TextColor="Black"
+                    Placeholder="Enter abbreviation here"
+                    HorizontalOptions="Fill"
+                    Text="{Binding Subject.Abbreviation}" />
+            </Frame>
+        </VerticalStackLayout>
+
+        <Button
+            HorizontalOptions="End"
+            BackgroundColor="Green"
+            Margin="20, 0"
+            Text="Save"
+            Command="{Binding SaveCommand}"/>
+
+    </VerticalStackLayout>
+</views:ContentPageBase>

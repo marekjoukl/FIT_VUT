@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InformationSystem.App.Views.StudentView"
+             xmlns:views="clr-namespace:InformationSystem.App.Views"
+             xmlns:m="clr-namespace:InformationSystem.BL.Models;assembly=InformationSystem.BL"
+             xmlns:students="clr-namespace:InformationSystem.App.ViewModels.Students"
+             x:Name="StudentListViewRoot"
+             x:DataType="students:StudentListViewModel">
+    <VerticalStackLayout BackgroundColor="White">
+        <Label Text="Faculty of Information Technology"
+               FontSize="30"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="LightGrey"
+               Padding="20"
+               Grid.Row="0" />
+        <Frame BackgroundColor="Grey"
+               CornerRadius="10"
+               Padding="10"
+               Margin="10"
+               HorizontalOptions="Fill"
+               WidthRequest="400"
+        >
+            <Label Text="Students"
+                   FontSize="20"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   />
+        </Frame>
+        <Button Text="Add"
+                FontSize="20"
+                TextColor="White"
+                Padding="10"
+                VerticalOptions="Center"
+                BackgroundColor="Green"
+                HorizontalOptions="End"
+                Margin="20, 0"
+                Command="{Binding  GoToCreateCommand}"
+        />
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Center"
+                     Spacing="10"
+                     Margin="20">
+            <Entry x:Name="InputField"
+                   Placeholder="Enter name here"
+                   Text="{Binding InputText, Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center" />
+            <Button Text="Search"
+                    Command="{Binding FilterNameCommand}"
+                    CommandParameter="{Binding InputText}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Center"
+                     Spacing="10"
+                     Margin="20">
+            <Button Text="Order by Name"
+                    Command="{Binding SortByOptionCommand}"
+                    CommandParameter="Name"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    BackgroundColor="LightGrey"
+                    TextColor="Black"
+                    CornerRadius="10"
+            />
+            <Button Text="Order by Surname"
+                    Command="{Binding SortByOptionCommand}"
+                    CommandParameter="Surname"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    BackgroundColor="LightGrey"
+                    TextColor="Black"
+                    CornerRadius="10"
+            />
+        </StackLayout>
+
+        <Grid RowDefinitions="Auto, *" >
+        <CollectionView ItemsSource="{Binding Students}" Grid.Row="1">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    Orientation="Vertical"
+                    HorizontalItemSpacing="10"
+                    VerticalItemSpacing="10"
+
+                    ></GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="m:StudentDetailModel">
+                    <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="3">
+                            <Grid ColumnDefinitions="*,*,*" HorizontalOptions="FillAndExpand">
+                                <Label
+                                Text="{Binding Name}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                />
+                            <Label
+                                Text="{Binding Surname}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                HorizontalOptions="Center"
+                                Grid.Column="1"
+                                VerticalOptions="Center"
+                            />
+
+
+                                <Button Text="View Subjects" Grid.Column="2"
+                                        HorizontalOptions="Center"
+                                        Command="{Binding Source={x:Reference StudentListViewRoot}, Path=BindingContext.GoToDetailCommand}"
+                                        CommandParameter="{Binding Id}"></Button>
+                        </Grid>
+                        </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="0" />
+                <Label Text="Surname" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="1" />
+                <Label Text="Subjects" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="3" />
+            </Grid>
+
+        </Grid>
+    </VerticalStackLayout>
+</views:ContentPageBase>

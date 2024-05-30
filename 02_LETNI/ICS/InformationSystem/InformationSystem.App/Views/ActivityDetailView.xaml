@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:InformationSystem.App.Views"
+             xmlns:m="clr-namespace:InformationSystem.BL.Models;assembly=InformationSystem.BL"
+             xmlns:activities="using:InformationSystem.App.ViewModels.Activities"
+             x:Class="InformationSystem.App.Views.ActivityDetailView"
+             x:Name="ActivityEditViewRoot"
+             x:DataType="activities:ActivityDetailViewModel">
+    <VerticalStackLayout BackgroundColor="White">
+        <Frame BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center">
+            <StackLayout Spacing="20">
+                <Label Text="{Binding Activity.Subject.Name}" FontSize="40" TextColor="Black" HorizontalOptions="Center"/>
+                <Label Text="{Binding Activity.Description}" FontSize="20" TextColor="Black" HorizontalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Button Text="Edit"
+                FontSize="20"
+                TextColor="White"
+                VerticalOptions="Center"
+                BackgroundColor="Blue"
+                HorizontalOptions="End"
+                Margin="20, 0"
+                Command="{Binding Source={x:Reference ActivityEditViewRoot}, Path=BindingContext.GoToEditCommand}"
+                CommandParameter="{Binding Activity}"
+        />
+        <Button Text="Delete"
+                FontSize="20"
+                TextColor="White"
+                VerticalOptions="Center"
+                BackgroundColor="Red"
+                HorizontalOptions="End"
+                Margin="20, 0"
+                Command="{Binding DeleteActivityCommand}"
+        />
+        <Grid RowDefinitions="Auto, *" >
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="0" />
+                <Label Text="Surname" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="1" />
+                <Label Text="Points" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="2" />
+                <Label Text="Review" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="3" />
+            </Grid>
+            <CollectionView ItemsSource="{Binding Activity.Students}" Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        HorizontalItemSpacing="10"
+                        VerticalItemSpacing="10"
+
+                    ></GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:RatingListModel">
+                        <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="3">
+                            <Grid ColumnDefinitions="*,*,*,*" HorizontalOptions="FillAndExpand" RowSpacing="10">
+                                <Label
+                                Text="{Binding StudentName}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+
+                            />
+                                <Label
+                                Text="{Binding StudentSurname}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="1"
+                            />
+                                <Label
+                                Text="{Binding Points}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="2"
+                            />
+                                <Label
+                                Text="{Binding  Note}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="3"
+                            />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </Grid>
+    </VerticalStackLayout>
+
+</views:ContentPageBase>

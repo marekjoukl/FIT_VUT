@@ -1,0 +1,13 @@
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/bin/Release/net8.0/InformationSystem.Common.deps.json
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/bin/Release/net8.0/InformationSystem.Common.dll
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/bin/Release/net8.0/InformationSystem.Common.pdb
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.csproj.AssemblyReference.cache
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.AssemblyInfoInputs.cache
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.AssemblyInfo.cs
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.csproj.CoreCompileInputs.cache
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.sourcelink.json
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.dll
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/refint/InformationSystem.Common.dll
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/InformationSystem.Common.pdb
+/Users/marek/FIT_VUT_backup/02_LETNI/ICS/project/InformationSystem/InformationSystem.Common/obj/Release/net8.0/ref/InformationSystem.Common.dll

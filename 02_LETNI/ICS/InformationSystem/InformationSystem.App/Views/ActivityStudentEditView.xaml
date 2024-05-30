@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:InformationSystem.App.Views"
+             xmlns:activities="clr-namespace:InformationSystem.App.ViewModels.Activities"
+             xmlns:m="clr-namespace:InformationSystem.BL.Models;assembly=InformationSystem.BL"
+             x:Class="InformationSystem.App.Views.ActivityStudentEditView"
+             xmlns:behaviors="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:DataType="activities:ActivityStudentEditViewModel"
+             x:Name="ActivityStudentEditViewRoot"
+             >
+        <VerticalStackLayout BackgroundColor="White">
+        <Frame BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center">
+            <StackLayout Spacing="20">
+                <Label Text="{Binding Activity.Subject.Name}" FontSize="40" TextColor="Black" HorizontalOptions="Center"/>
+                <Label Text="{Binding Activity.Description}" FontSize="20" TextColor="Black" HorizontalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Grid RowDefinitions="Auto, Auto, *" >
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="0" />
+                <Label Text="Surname" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="1" />
+                <Label Text="Points" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="2" />
+                <Label Text="Review" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="3" />
+                <Label Text="Actions" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="4" />
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*,*,*" HorizontalOptions="FillAndExpand" RowSpacing="10" Grid.Row="1">
+                <Picker
+
+                    Grid.Column="0"
+                    ItemsSource="{Binding Students}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding StudentsSelected}"
+                >
+                </Picker>
+                <Picker
+                    Grid.Column="1"
+                    ItemsSource="{Binding Students}"
+                    ItemDisplayBinding="{Binding Surname}"
+                    SelectedItem="{Binding StudentsSelected}"
+                >
+                </Picker>
+                <Entry
+                    Text="{Binding RatingNew.Points}"
+                    Grid.Column="2"
+                >
+                </Entry>
+                <Entry
+                    Text="{Binding RatingNew.Note}"
+                    Grid.Column="3"
+                >
+                </Entry>
+                <Button
+                    Text="Add"
+                    FontSize="20"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Margin="20, 0"
+                    Padding="10"
+                    Grid.Column="4"
+                    Command="{Binding AddNewStudentToActivityCommand}"/>
+            </Grid>
+            <CollectionView ItemsSource="{Binding Activity.Students}" Grid.Row="2">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        HorizontalItemSpacing="10"
+                        VerticalItemSpacing="10"
+                    ></GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:RatingListModel">
+                        <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="3">
+                            <Grid ColumnDefinitions="*,*,*,*,*" HorizontalOptions="FillAndExpand" RowSpacing="10">
+                                <Label
+                                Text="{Binding StudentName}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+
+                            />
+                                <Label
+                                Text="{Binding StudentSurname}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="1"
+                            />
+                                <Entry
+                                    Text="{Binding Points}"
+                                    FontSize="20"
+                                    TextColor="Black"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Grid.Column="2"
+                                    >
+                                    <Entry.Behaviors>
+                                        <behaviors:EventToCommandBehavior EventName="TextChanged"
+                                                                          Command="{Binding Source={x:Reference ActivityStudentEditViewRoot}, Path=BindingContext.UpdateRatingCommand}"
+                                                                          CommandParameter="{Binding .}"
+                                                                          />
+                                    </Entry.Behaviors>
+                                </Entry>
+                                <Entry
+                                    Text="{Binding  Note}"
+                                    FontSize="20"
+                                    TextColor="Black"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Grid.Column="3"
+                                    >
+                                    <Entry.Behaviors>
+                                        <behaviors:EventToCommandBehavior EventName="TextChanged"
+                                                                          Command="{Binding Source={x:Reference ActivityStudentEditViewRoot}, Path=BindingContext.UpdateRatingCommand}"
+                                                                          CommandParameter="{Binding .}"
+                                        />
+                                    </Entry.Behaviors>
+                                </Entry>
+                                <Button
+                                    Text="Remove"
+                                    FontSize="20"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Margin="20, 0"
+                                    Padding="10"
+                                    Grid.Column="4"
+                                    Command="{Binding Source={x:Reference ActivityStudentEditViewRoot}, Path=BindingContext.RemoveSubjectCommand}"
+                                    CommandParameter="{Binding .}"
+                                    />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </Grid>
+    </VerticalStackLayout>
+</views:ContentPageBase>

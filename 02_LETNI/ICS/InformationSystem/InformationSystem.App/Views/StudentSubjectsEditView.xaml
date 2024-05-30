@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:InformationSystem.App.Views"
+             xmlns:students="clr-namespace:InformationSystem.App.ViewModels.Students"
+             xmlns:m="clr-namespace:InformationSystem.BL.Models;assembly=InformationSystem.BL"
+             x:DataType="students:StudentSubjectsEditViewModel"
+             x:Name="StudentSubjectsEditViewRoot"
+             x:Class="InformationSystem.App.Views.StudentSubjectsEditView">
+    <VerticalStackLayout BackgroundColor="White">
+        <Frame BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center">
+            <StackLayout>
+                <Label Text="{Binding Student.Name}" FontSize="40" Padding="10" TextColor="Black" HorizontalOptions="Center" />
+                <Label Text="{Binding Student.Surname}" FontSize="40" Padding="10" TextColor="Black" HorizontalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center">
+            <Image
+                Source="{Binding Student.PhotoUrl, TargetNullValue='https://cdn4.iconfinder.com/data/icons/basic-flat-ui-extra-set-200-item/76/ui_ux_minimalist_button_profile_contact_people-512.png'}"
+                WidthRequest="100"
+                HeightRequest="100"
+                Aspect="AspectFill"
+            />
+        </Frame>
+        <Grid RowDefinitions="Auto, Auto, *" >
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="0" />
+                <Label Text="Abbreviation" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="1" />
+                <Label Text="Action" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="2" />
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*" HorizontalOptions="FillAndExpand" RowSpacing="10" Grid.Row="1">
+                <Picker
+                    ItemsSource="{Binding Subjects}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding SubjectsSelected}"
+                    FontSize="20"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+
+                />
+                <Picker
+                    ItemsSource="{Binding Subjects}"
+                    ItemDisplayBinding="{Binding Abbreviation}"
+                    SelectedItem="{Binding SubjectsSelected}"
+                    FontSize="20"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Grid.Column="1"
+                />
+                <Button
+                    Text="Add"
+                    FontSize="20"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Margin="20, 0"
+                    Padding="10"
+                    Grid.Column="4"
+                    Command="{Binding Source={x:Reference StudentSubjectsEditViewRoot}, Path=BindingContext.AddNewSubjectToStudentCommand}"
+                    CommandParameter="{Binding .}"
+                />
+            </Grid>
+            <CollectionView ItemsSource="{Binding Student.Subjects}" Grid.Row="2">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        HorizontalItemSpacing="10"
+                        VerticalItemSpacing="10"
+
+                    ></GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:EnrollmentListModel">
+                        <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="3">
+                            <Grid ColumnDefinitions="*,*,*" HorizontalOptions="FillAndExpand" RowSpacing="10">
+                                <Entry
+                                Text="{Binding SubjectName}"
+                                FontSize="20"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+
+                            />
+                                <Entry
+                                Text="{Binding SubjectAbbreviation}"
+                                FontSize="20"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="1"
+                            />
+                                <Button
+                                    Text="Remove"
+                                    FontSize="20"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Margin="20, 0"
+                                    Padding="10"
+                                    Grid.Column="4"
+                                    Command="{Binding Source={x:Reference StudentSubjectsEditViewRoot}, Path=BindingContext.RemoveSubjectCommand}"
+                                    CommandParameter="{Binding .}"
+                                />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </Grid>
+    </VerticalStackLayout>
+</views:ContentPageBase>

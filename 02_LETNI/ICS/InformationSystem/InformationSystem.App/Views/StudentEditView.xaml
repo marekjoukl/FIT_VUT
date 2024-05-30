@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="InformationSystem.App.Views.StudentEditView"
+                       xmlns:views="clr-namespace:InformationSystem.App.Views"
+                       xmlns:students="clr-namespace:InformationSystem.App.ViewModels.Students"
+                       xmlns:models="clr-namespace:InformationSystem.BL.Models"
+                       xmlns:models1="using:InformationSystem.BL.Models"
+                       x:DataType="students:StudentEditViewModel"
+                       x:Name="StudentEditViewRoot"
+>
+    <Grid RowDefinitions="Auto, *, Auto"
+          RowSpacing="40">
+        <Grid Grid.Row="0"
+              ColumnDefinitions="320, *"
+              ColumnSpacing="56">
+            <Frame Grid.Column="0"
+                BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center" HeightRequest="150">
+                <Image
+                    Source="{Binding Student.PhotoUrl, TargetNullValue='https://cdn4.iconfinder.com/data/icons/basic-flat-ui-extra-set-200-item/76/ui_ux_minimalist_button_profile_contact_people-512.png'}"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    Aspect="AspectFill"
+                />
+            </Frame>
+            <VerticalStackLayout Grid.Column="1"
+                BackgroundColor="White" >
+                                <Label Text="Add / Edit Student"
+                                       FontSize="30"
+                                       TextColor="Black"
+                                       HorizontalTextAlignment="Center"
+                                       BackgroundColor="LightGrey"
+                                       Padding="20"
+                                        />
+                                <Entry Placeholder="Name"
+                                       PlaceholderColor="DarkGrey"
+                                       Text="{Binding Student.Name}"
+                                       FontSize="20"
+                                       BackgroundColor="LightGray"
+                                       Margin="10"
+                                       TextColor="Black">
+                                </Entry>
+                                <Entry Placeholder="Surname"
+                                       PlaceholderColor="DarkGrey"
+                                       Text="{Binding Student.Surname}"
+                                       FontSize="20"
+                                       BackgroundColor="LightGray"
+                                       Margin="10"
+                                       TextColor="Black">
+                                </Entry>
+                                <Entry Placeholder="Photo URL"
+                                       PlaceholderColor="DarkGrey"
+                                       Text="{Binding Student.PhotoUrl}"
+                                       FontSize="20"
+                                       BackgroundColor="LightGray"
+                                       Margin="10"
+                                       TextColor="Black">
+                                </Entry>
+
+                                <Button Text="Save"
+                                        FontSize="20"
+                                        TextColor="White"
+                                        Padding="10"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Green"
+                                        HorizontalOptions="End"
+                                        Margin="20, 0"
+                                        Command="{Binding  SaveCommand}"
+                                />
+                        </VerticalStackLayout>
+            </Grid>
+        <VerticalStackLayout Grid.Row="1"
+                             BackgroundColor="White" >
+            <Button Text="Edit subjects"
+                    FontSize="20"
+                    TextColor="White"
+                    Padding="10"
+                    VerticalOptions="Center"
+                    BackgroundColor="Blue"
+                    HorizontalOptions="End"
+                    Margin="20, 0"
+                    IsVisible="{Binding Student, Converter={StaticResource ModelIsNewToIsVisibleInvertedConverter}}"
+                    Command="{Binding GoToStudentSubjectsEditCommand}"
+            />
+            <Label Text="Subjects can only be assigned once the new student is added"
+                   HorizontalOptions="End"
+                   TextColor="Red"
+                   Margin="20, 0"
+                   FontSize="15"
+                   IsVisible="{Binding Student, Converter={StaticResource ModelIsNewToIsVisibleConverter}}" />
+
+        </VerticalStackLayout>
+    </Grid>
+
+
+</views:ContentPageBase>

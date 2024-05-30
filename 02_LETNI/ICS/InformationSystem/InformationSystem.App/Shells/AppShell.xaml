@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="InformationSystem.App.Shells.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:app="clr-namespace:InformationSystem.App"
+    xmlns:views="clr-namespace:InformationSystem.App.Views"
+    Shell.FlyoutBehavior="Disabled"
+    x:Name="AppShellRoot"
+    Title="InformationSystem.App">
+
+    <Shell.MenuBarItems>
+        <MenuBarItem Text="Menu">
+            <MenuFlyoutItem Text="Events"
+                            Command="{Binding Source={x:Reference AppShellRoot}, Path=GoToEventsCommand}" />
+            <MenuFlyoutItem Text="Students"
+                            Command="{Binding Source={x:Reference AppShellRoot}, Path=GoToStudentsCommand}" />
+            <MenuFlyoutItem Text="Subjects"
+                            Command="{Binding Source={x:Reference AppShellRoot}, Path=GoToSubjectsCommand}" />
+        </MenuBarItem>
+    </Shell.MenuBarItems>
+
+    <ShellContent ContentTemplate="{DataTemplate views:ActivityListView}" Route="Events" />
+    <ShellContent ContentTemplate="{DataTemplate views:StudentView}" Route="Students" />
+    <ShellContent ContentTemplate="{DataTemplate views:SubjectView}" Route="Subjects" />
+
+</Shell>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <script src="./js/fixedNavbar.js" defer></script>
+    <script src="./js/infiniteBar.js" defer></script>
+    <script src="./js/sectionUpdate.js" defer></script>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="./js/smootScroll.js" defer></script>
+    <script src="./js/hideNavbar.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <a href="https://marekjoukl.github.io/">Marek Joukl</a>
+            <i id="burger-menu" class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <ul id="sidemenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-xmark" onclick="closemenu()"></i></a></li>
+            </ul>
+        </nav>
+        <div id="header-content">
+            <div id="header-left">
+                <h1>Hello, I'm <span>Marek</span>,<span class="break-after"></span> aspiring IT student and future
+                    frontend
+                    developer.</h1>
+                <ul>
+                    <li><a href="https://github.com/marekjoukl"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100008390384486"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/marek_joukl/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/marek-joukl-282550295/"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <img src="./img/header-photo.jpg" alt="header-photo">
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <div class="row">
+                <div class="row1">
+                    <img src="./img/about-me-photo.jpg" alt="about-me-photo">
+                </div>
+                <div class="row2">
+                    <h2>About Me</h2>
+                    <p>
+                        My name is Marek Joukl, and I am currently pursuing my studies at the Faculty of Information
+                        Technology
+                        (FIT) at Brno University of Technology (BUT). My interets are in web development and
+                        programming.
+                        I have experience with HTML, CSS, JavaScript, C# and many others (see below). I am also
+                        interested
+                        in
+                        .NET
+                        and software development. I am currently seeking opportunities for internships or Junior
+                        positions
+                        to
+                        further enhance my skills. I am a hardworking and responsible person who is always willing to
+                        learn
+                        new
+                        things.
+                        I am also a team player and I am able to work under pressure. As you can see on the pictures, I
+                        am a
+                        lover of
+                        mountains and hiking. I love to spend my time in the nature and I am always looking for new
+                        adventures.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <h2 class="section-header">Experience</h2>
+            <div class="row">
+                <div class="row1">
+                    <h3>Currently looking for a first IT job...</h3>
+                </div>
+                <div class="row2">
+                    <div class="job">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <div class="job-content">
+                            <p>Present - ???</p>
+                            <h4>My future IT position!</h4>
+                            <p>SelfEducating s.r.o</p>
+                        </div>
+
+                    </div>
+                    <div class="job">
+                        <i class="fa-solid fa-car"></i>
+                        <div class="job-content">
+                            <p>Mar 2020 - present</p>
+                            <h4>Delivery driver</h4>
+                            <p>DoDo s.r.o</p>
+                        </div>
+
+                    </div>
+                    <div class="job">
+                        <i class="fa-solid fa-egg"></i>
+                        <div class="job-content">
+                            <p>Sep 2021 - 2024</p>
+                            <h4>Poultry Farm Assistant</h4>
+                            <p>Zelenka s.r.o</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2 class="section-header">Skills</h2>
+            <div class="icons">
+                <div class="icons-slide">
+                    <img src="https://skillicons.dev/icons?i=html" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=css" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=js" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=react" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=c" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=cpp" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=cs" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=dotnet" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=python" alt="icon">
+                    <img src="https://skillicons.dev/icons?i=figma" alt="icon">
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h2 class="section-header">Education</h2>
+            <div class="education-items">
+                <div class="education-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content-side">
+                            <h3>Brno University of Technology - Faculty of Information Technology</h3>
+                            <p>Bachelor's programme (3 years)
+                            </p>
+                        </div>
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <i class="fa-solid fa-scroll"></i>
+                        <div class="timeline-content-side">
+                            <h3>CAE Certificate in Advanced English - C1</h3>
+                            <p>Successfully passed the Cambridge exam, which tests English at C1 level.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="education-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2013</div>
+                    <div class="timeline-content">
+                        <div class="timeline-content-side">
+                            <h3>St. Cyril and Methodius Grammar School Brno</h3>
+                            <p>8 years grammar school with a diploma</p>
+                        </div>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TODO -->
+        <!-- <section id="projects">
+            <h2>Projects</h2>
+            <div>
+                <h3>Personal Portfolio</h3>
+                <p>2021</p>
+            </div>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <div>
+                <h3>Blog</h3>
+            </div>
+        </section> -->
+        <section id="contact">
+            <h2 class="section-header">Contact</h2>
+            <div class="row">
+                <div class="contact-left">
+                    <h3>Send me email</h3>
+                    <div class="contact-info">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><a href="mailto:jouklmarek@seznam.cz">jouklmarek@seznam.cz</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fa-solid fa-square-phone"></i>
+                        <p><a href="tel:+420606593321">+420 606 593 321</a></p>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100008390384486"><i
+                                    class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/marek_joukl/"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Marek Joukl</p>
+    </footer>
+</body>
+
+</html>

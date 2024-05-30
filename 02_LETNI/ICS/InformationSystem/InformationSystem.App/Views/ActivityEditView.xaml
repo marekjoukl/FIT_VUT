@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InformationSystem.App.Views.ActivityEditView"
+             xmlns:views="clr-namespace:InformationSystem.App.Views"
+             xmlns:activities="clr-namespace:InformationSystem.App.ViewModels.Activities"
+             x:DataType="activities:ActivityEditViewModel"
+             x:Name="ActivityEditViewRoot"
+             >
+    <VerticalStackLayout BackgroundColor="White" >
+                    <Label Text="Create / Edit Event"
+                           FontSize="30"
+                           TextColor="Black"
+                           HorizontalTextAlignment="Center"
+                           BackgroundColor="LightGrey"
+                           Padding="20"
+                            />
+                    <Button Text="Edit Ratings"
+                            FontSize="20"
+                            TextColor="White"
+                            VerticalOptions="Center"
+                            BackgroundColor="Blue"
+                            HorizontalOptions="End"
+                            Margin="20, 0"
+                            Command="{Binding  GoToActivityStudentEditCommand}"
+                            IsVisible="{Binding Activity, Converter={StaticResource ModelIsNewToIsVisibleInvertedConverter}}">
+                    </Button>
+                    <Label Text="Cannot add ratings to new event"
+                            FontSize="20"
+                            TextColor="LightCoral"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"
+                            Margin="20, 0"
+                            IsVisible="{Binding Activity, Converter={StaticResource ModelIsNewToIsVisibleConverter}}">
+                    </Label>
+                    <Label
+                        Text="Choose subject"
+                        FontSize="20"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        BackgroundColor="LightGrey"
+                        Padding="10"
+                    >
+                    </Label>
+                    <Picker ItemsSource="{Binding Subjects}"
+                            SelectedItem="{Binding SubjectSelected}"
+                            ItemDisplayBinding="{Binding Name}"
+                           FontSize="20"
+                           BackgroundColor="LightGray"
+                           Margin="10"
+                           TextColor="Black" />
+                    <Entry Placeholder="Description"
+                           PlaceholderColor="DarkGrey"
+                           Text="{Binding Activity.Description}"
+                           FontSize="20"
+                           BackgroundColor="LightGray"
+                           Margin="10"
+                           TextColor="Black">
+                    </Entry>
+                    <Label
+                        Text="Start"
+                        FontSize="20"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        BackgroundColor="LightGrey"
+                        Padding="10"
+                        >
+                    </Label>
+                    <DatePicker
+                        Date="{Binding Activity.StartDate}"
+                        Format="DD:MM:YYYY"
+                        FontSize="20"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        Margin="10"
+                    >
+                    </DatePicker>
+                    <TimePicker
+                        FontSize="20"
+                        Time="{Binding Activity.StartTime}"
+                        Format="HH:MM"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        Margin="10"
+                    >
+                    </TimePicker>
+                    <Label
+                        Text="End"
+                        FontSize="20"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        BackgroundColor="LightGrey"
+                        Padding="10"
+                    >
+                    </Label>
+                    <DatePicker
+                        FontSize="20"
+                        Date="{Binding Activity.EndDate}"
+                        Format="DD:MM:YYYY"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        Margin="10"
+                        >
+                    </DatePicker>
+                    <TimePicker
+                        FontSize="20"
+                        Time="{Binding Activity.EndTime}"
+                        Format="HH:MM"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        Margin="10"
+                    >
+                    </TimePicker>
+                    <Label
+                        Text="Room"
+                        FontSize="20"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        BackgroundColor="LightGrey"
+                        Padding="10"
+                    >
+                    </Label>
+                    <Picker ItemsSource="{Binding Rooms}"
+                            SelectedItem="{Binding Activity.Room}"
+                            ItemDisplayBinding="{Binding ., Converter={StaticResource RoomToStringConverter}}"
+                           FontSize="20"
+                           BackgroundColor="LightGray"
+                           Margin="10"
+                            HorizontalOptions="Center"
+                           >
+                    </Picker>
+                    <Label
+                        Text="Type"
+                        FontSize="20"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        BackgroundColor="LightGrey"
+                        Padding="10"
+                    >
+                    </Label>
+                    <Picker ItemsSource="{Binding Type}"
+                            SelectedItem="{Binding Activity.Type}"
+                            ItemDisplayBinding="{Binding ., Converter={StaticResource TypeToStringConverter}}"
+                            FontSize="20"
+                            BackgroundColor="LightGray"
+                            Margin="10"
+                            HorizontalOptions="Center"
+                    >
+                    </Picker>
+                    <Button Text="Save"
+                            FontSize="20"
+                            TextColor="White"
+                            VerticalOptions="Center"
+                            BackgroundColor="DarkGreen"
+                            HorizontalOptions="End"
+                            Margin="20, 0"
+                            Command="{Binding SaveCommand}">
+                    </Button>
+            </VerticalStackLayout>
+
+</views:ContentPageBase>

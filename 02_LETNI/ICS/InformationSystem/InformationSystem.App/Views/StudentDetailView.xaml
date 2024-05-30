@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:InformationSystem.App.Views"
+             xmlns:m="clr-namespace:InformationSystem.BL.Models;assembly=InformationSystem.BL"
+             xmlns:student="using:InformationSystem.App.ViewModels.Students"
+             x:Class="InformationSystem.App.Views.StudentDetailView"
+             x:DataType="student:StudentDetailViewModel">
+    <VerticalStackLayout BackgroundColor="White">
+        <Frame BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center">
+            <StackLayout>
+                <Label Text="{Binding Student.Name}" FontSize="40" Padding="10" TextColor="Black" HorizontalOptions="Center" />
+                <Label Text="{Binding Student.Surname}" FontSize="40" Padding="10" TextColor="Black" HorizontalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Gray" BackgroundColor="Grey" CornerRadius="10" Padding="10" Margin="10" HorizontalOptions="Center">
+            <Image
+                Source="{Binding Student.PhotoUrl, TargetNullValue='https://cdn4.iconfinder.com/data/icons/basic-flat-ui-extra-set-200-item/76/ui_ux_minimalist_button_profile_contact_people-512.png'}"
+                WidthRequest="100"
+                HeightRequest="100"
+                Aspect="AspectFill"
+                />
+        </Frame>
+        <Button Text="Edit"
+                FontSize="20"
+                TextColor="White"
+                Padding="10"
+                VerticalOptions="Center"
+                BackgroundColor="Blue"
+                HorizontalOptions="End"
+                Margin="20, 0"
+                Command="{Binding  GoToStudentEditCommand}"
+        />
+        <Button Text="Delete"
+                FontSize="20"
+                TextColor="White"
+                Padding="10"
+                VerticalOptions="Center"
+                BackgroundColor="Red"
+                HorizontalOptions="End"
+                Margin="20, 0"
+                Command="{Binding  DeleteStudentCommand}"
+        />
+
+        <Grid RowDefinitions="Auto, *" >
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="0" />
+                <Label Text="Abbreviation" FontSize="20" BackgroundColor="Grey" HorizontalTextAlignment="Center" Padding="10" Grid.Column="1" />
+            </Grid>
+            <CollectionView ItemsSource="{Binding Student.Subjects}" Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        HorizontalItemSpacing="10"
+                        VerticalItemSpacing="10"
+
+                    ></GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:EnrollmentListModel">
+                        <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="3">
+                            <Grid ColumnDefinitions="*,*" HorizontalOptions="FillAndExpand" RowSpacing="10">
+                                <Label
+                                Text="{Binding SubjectName}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+
+                            />
+                                <Label
+                                Text="{Binding SubjectAbbreviation}"
+                                FontSize="20"
+                                TextColor="Black"
+                                LineBreakMode="WordWrap"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="1"
+                            />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </Grid>
+    </VerticalStackLayout>
+
+</views:ContentPageBase>
