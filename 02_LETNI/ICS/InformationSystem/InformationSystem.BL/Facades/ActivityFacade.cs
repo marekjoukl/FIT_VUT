@@ -63,17 +63,6 @@ public class ActivityFacade(
 
     public virtual async Task<IEnumerable<ActivityListModel>> GetAsync(string subject, string? orderBy, bool desc)
     {
-        // string subjectLinq = subject == null ? "" : $"Subject.Abbreviation == \"{subject}\"";
-        // string startLinq = start == null ? "" : $"Start > {start.ToString()}";
-        // string endLinq = end == null ?"" : $"End < {end.ToString()}";
-        // string whereLinq = subjectLinq;
-        // if (whereLinq != "" && startLinq != "")
-        //     whereLinq += " and ";
-        // whereLinq = startLinq;
-        // if (whereLinq != "" && endLinq != "")
-        //     whereLinq += " and ";
-        // whereLinq = endLinq;
-
         string descStr = desc ? "desc" : "";
         if (orderBy == "Subject")
             orderBy = "Subject.Abbreviation";
